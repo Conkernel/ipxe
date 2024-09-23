@@ -8,13 +8,15 @@
 
 #### Los comandos a usar para compilar ambas versiones son:
 
-##### Para BIOS:
+###### Para BIOS:
 
 ```bash
 make bin/ipxe.pxe
 ```
 
-##### Para EFI 64:
+````
+
+###### Para EFI 64:
 
 ```bash
 make bin-x86_64-efi/ipxe.efi
@@ -31,13 +33,13 @@ Aquí tienes varias formas de compilar iPXE para **BIOS** y **UEFI 64-bit (x86_6
 
 Este método activa la depuración para **todos los componentes** del sistema iPXE.
 
-##### Para BIOS:
+###### Para BIOS:
 
 ```bash
 make bin/ipxe.pxe DEBUG=all
 ```
 
-##### Para UEFI 64-bit:
+###### Para UEFI 64-bit:
 
 ```bash
 make bin-x86_64-efi/ipxe.efi DEBUG=all
@@ -47,13 +49,13 @@ make bin-x86_64-efi/ipxe.efi DEBUG=all
 
 Si estás tratando de depurar problemas de red o de arranque PXE, puedes habilitar específicamente los módulos de depuración de **DHCP** y **PXE**.
 
-##### Para BIOS:
+###### Para BIOS:
 
 ```bash
 make bin/ipxe.pxe DEBUG=dhcp,pxe
 ```
 
-##### Para UEFI 64-bit:
+###### Para UEFI 64-bit:
 
 ```bash
 make bin-x86_64-efi/ipxe.efi DEBUG=dhcp,pxe
@@ -63,13 +65,13 @@ make bin-x86_64-efi/ipxe.efi DEBUG=dhcp,pxe
 
 Si tienes problemas relacionados con la pila de red, puedes habilitar la depuración de **TCP** e **IP**.
 
-##### Para BIOS:
+###### Para BIOS:
 
 ```bash
 make bin/ipxe.pxe DEBUG=tcp,ip
 ```
 
-##### Para UEFI 64-bit:
+###### Para UEFI 64-bit:
 
 ```bash
 make bin-x86_64-efi/ipxe.efi DEBUG=tcp,ip
@@ -79,13 +81,13 @@ make bin-x86_64-efi/ipxe.efi DEBUG=tcp,ip
 
 Si el problema está relacionado con la carga de imágenes (ISO, kernels, etc.), puedes habilitar la depuración de los componentes relacionados con **IMG**.
 
-##### Para BIOS:
+###### Para BIOS:
 
 ```bash
 make bin/ipxe.pxe DEBUG=img
 ```
 
-##### Para UEFI 64-bit:
+###### Para UEFI 64-bit:
 
 ```bash
 make bin-x86_64-efi/ipxe.efi DEBUG=img
@@ -95,13 +97,13 @@ make bin-x86_64-efi/ipxe.efi DEBUG=img
 
 Para problemas con conexiones seguras (HTTPS), puedes habilitar la depuración de **HTTPS** y **SSL**.
 
-##### Para BIOS:
+###### Para BIOS:
 
 ```bash
 make bin/ipxe.pxe DEBUG=https,ssl
 ```
 
-##### Para UEFI 64-bit:
+###### Para UEFI 64-bit:
 
 ```bash
 make bin-x86_64-efi/ipxe.efi DEBUG=https,ssl
@@ -111,13 +113,13 @@ make bin-x86_64-efi/ipxe.efi DEBUG=https,ssl
 
 Si sospechas que hay problemas con el arranque, puedes habilitar la depuración de los módulos de **arranque PXE** y **configuración**.
 
-##### Para BIOS:
+###### Para BIOS:
 
 ```bash
 make bin/ipxe.pxe DEBUG=pxe,settings
 ```
 
-##### Para UEFI 64-bit:
+###### Para UEFI 64-bit:
 
 ```bash
 make bin-x86_64-efi/ipxe.efi DEBUG=pxe,settings
@@ -127,13 +129,13 @@ make bin-x86_64-efi/ipxe.efi DEBUG=pxe,settings
 
 Puedes combinar varios tipos de depuración si deseas enfocarte en varios aspectos al mismo tiempo. Por ejemplo, depurar **TCP**, **DHCP** y **HTTP** juntos.
 
-##### Para BIOS:
+###### Para BIOS:
 
 ```bash
 make bin/ipxe.pxe DEBUG=tcp,dhcp,http
 ```
 
-##### Para UEFI 64-bit:
+###### Para UEFI 64-bit:
 
 ```bash
 make bin-x86_64-efi/ipxe.efi DEBUG=tcp,dhcp,http
@@ -143,13 +145,13 @@ make bin-x86_64-efi/ipxe.efi DEBUG=tcp,dhcp,http
 
 Si sospechas problemas relacionados con el hardware de red o las interfaces PCI, habilita la depuración de **NIC** y **PCI**.
 
-##### Para BIOS:
+###### Para BIOS:
 
 ```bash
 make bin/ipxe.pxe DEBUG=nic,pci
 ```
 
-##### Para UEFI 64-bit:
+###### Para UEFI 64-bit:
 
 ```bash
 make bin-x86_64-efi/ipxe.efi DEBUG=nic,pci
@@ -159,13 +161,13 @@ make bin-x86_64-efi/ipxe.efi DEBUG=nic,pci
 
 Si buscas un mayor nivel de detalle, puedes activar `all` para depuración global y añadir un componente específico.
 
-##### Para BIOS:
+###### Para BIOS:
 
 ```bash
 make bin/ipxe.pxe DEBUG=all,tcp,dhcp,pxe
 ```
 
-##### Para UEFI 64-bit:
+###### Para UEFI 64-bit:
 
 ```bash
 make bin-x86_64-efi/ipxe.efi DEBUG=all,tcp,dhcp,pxe
@@ -279,3 +281,4 @@ Si deseas compilar iPXE para varios tipos de entornos, aquí te doy algunos ejem
    ```
 
 Cada tipo de binario tiene su aplicación según el entorno donde desees usar iPXE (BIOS vs. UEFI, red vs. medio físico). Por lo tanto, la selección del formato adecuado depende de las capacidades del hardware y de la infraestructura en la que trabajas.
+````
