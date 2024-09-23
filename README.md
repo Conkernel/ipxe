@@ -14,8 +14,6 @@
 make bin/ipxe.pxe
 ```
 
-````
-
 ##### Para EFI 64:
 
 ```bash
@@ -281,4 +279,7 @@ Si deseas compilar iPXE para varios tipos de entornos, aquí te doy algunos ejem
    ```
 
 Cada tipo de binario tiene su aplicación según el entorno donde desees usar iPXE (BIOS vs. UEFI, red vs. medio físico). Por lo tanto, la selección del formato adecuado depende de las capacidades del hardware y de la infraestructura en la que trabajas.
-````
+
+```
+
+```
