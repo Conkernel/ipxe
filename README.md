@@ -1,4 +1,4 @@
-````markdown
+
 # Proyecto IPXE
 
 #### Fuentes del proyecto ipxe sacadas del github de netboot.xyz (https://github.com/netbootxyz/ipxe.git)
